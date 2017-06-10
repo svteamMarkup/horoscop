@@ -1,0 +1,35 @@
+.header {
+  max-width: 700px;
+  margin: auto;
+  padding-top: 20px;
+
+  text-align: center;
+  @media screen and (max-width: 660px) {
+    padding-top: 15px;
+  }
+  &__top {
+    font-size: 45px;
+
+    padding-bottom: 10px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    border-bottom: 1px solid rgba(#96c8ff, .3);
+    @media screen and (max-width: 660px) {
+      font-size: 18px;
+    }
+  }
+  &__bottom {
+    font-size: 16px;
+
+    padding: 10px 20px;
+
+    color: #96c8ff;
+    @media screen and (max-width: 660px) {
+      font-size: 12px;
+
+      padding-bottom: 0;
+    }
+  }
+}

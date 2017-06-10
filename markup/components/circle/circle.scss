@@ -1,0 +1,293 @@
+.circle-container {
+  position: relative;
+
+  width: 802px;
+  height: 803px;
+  margin: auto;
+
+  background: url(%=static=%assets/circle/circle-bg.png) no-repeat;
+  @media screen and (max-width: 960px) {
+    overflow: hidden;
+
+    width: 651px;
+    height: 651px;
+    margin-top: 50px;
+
+    background-size: cover;
+  }
+  @media screen and (max-width: 660px) {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    width: 301px;
+    height: 301px;
+    margin-top: 20px;
+
+    transform: translate(-50%,-50%);
+  }
+  @media screen and (max-width: 320px) {
+    position: relative;
+    top: inherit;
+    left: inherit;
+
+    margin-top: 10px;
+
+    transform: translate(0);
+  }
+  &__center {
+    font-family: 'Lato-Black';
+    font-size: 50px;
+    line-height: 52px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    max-width: 300px;
+
+    transform: translate(-50%,-50%);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    @media screen and (max-width: 960px) {
+      font-size: 40px;
+      line-height: 42px;
+    }
+    @media screen and (max-width: 660px) {
+      font-size: 20px;
+      line-height: 22px;
+
+      max-width: 160px;
+    }
+  }
+  &__item {
+    position: absolute;
+
+    transition: all .3s ease-out;
+    text-decoration: none;
+
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+    &._item1 {
+      top: 55px;
+      left: 430px;
+
+      @include bg($img1_desktop);
+      @media screen and (max-width: 960px) {
+        top: 45px;
+        left: 350px;
+
+        @include bg($img1_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 22px;
+        left: 161px;
+
+        @include bg($img1_mobile);
+      }
+    }
+    &._item2 {
+      top: 145px;
+      left: 565px;
+
+      @include bg($img2_desktop);
+      @media screen and (max-width: 960px) {
+        top: 115px;
+        left: 460px;
+
+        @include bg($img2_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 54px;
+        left: 213px;
+
+        @include bg($img2_mobile);
+      }
+    }
+    &._item3 {
+      top: 281px;
+      left: 668px;
+
+      @include bg($img3_desktop);
+      @media screen and (max-width: 960px) {
+        top: 227px;
+        left: 543px;
+
+        @include bg($img3_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 106px;
+        left: 250px;
+
+        @include bg($img3_mobile);
+      }
+    }
+    &._item4 {
+      top: 450px;
+      left: 649px;
+
+      @include bg($img4_desktop);
+      @media screen and (max-width: 960px) {
+        top: 365px;
+        left: 526px;
+
+        @include bg($img4_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 168px;
+        left: 243px;
+
+        @include bg($img4_mobile);
+      }
+    }
+    &._item5 {
+      top: 580px;
+      left: 563px;
+
+      @include bg($img5_desktop);
+      @media screen and (max-width: 960px) {
+        top: 469px;
+        left: 456px;
+
+        @include bg($img5_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 218px;
+        left: 211px;
+
+        @include bg($img5_mobile);
+      }
+    }
+    &._item6 {
+      top: 670px;
+      left: 425px;
+
+      @include bg($img6_desktop);
+      @media screen and (max-width: 960px) {
+        top: 540px;
+        left: 346px;
+
+        @include bg($img6_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 252px;
+        left: 160px;
+
+        @include bg($img6_mobile);
+      }
+    }
+    &._item7 {
+      top: 669px;
+      left: 276px;
+
+      @include bg($img7_desktop);
+      @media screen and (max-width: 960px) {
+        top: 541px;
+        left: 226px;
+
+        @include bg($img7_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 251px;
+        left: 104px;
+
+        @include bg($img7_mobile);
+      }
+    }
+    &._item8 {
+      top: 586px;
+      left: 131px;
+
+      @include bg($img8_desktop);
+      @media screen and (max-width: 960px) {
+        top: 477px;
+        left: 106px;
+
+        @include bg($img8_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 220px;
+        left: 48px;
+
+        @include bg($img8_mobile);
+      }
+    }
+    &._item9 {
+      top: 453px;
+      left: 35px;
+
+      @include bg($img9_desktop);
+      @media screen and (max-width: 960px) {
+        top: 367px;
+        left: 28px;
+
+        @include bg($img9_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 170px;
+        left: 12px;
+
+        @include bg($img9_mobile);
+      }
+    }
+    &._item10 {
+      top: 280px;
+      left: 48px;
+
+      @include bg($img10_desktop);
+      @media screen and (max-width: 960px) {
+        top: 227px;
+        left: 40px;
+
+        @include bg($img10_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 105px;
+        left: 18px;
+
+        @include bg($img10_mobile);
+      }
+    }
+    &._item11 {
+      top: 155px;
+      left: 132px;
+
+      @include bg($img11_desktop);
+      @media screen and (max-width: 960px) {
+        top: 125px;
+        left: 106px;
+
+        @include bg($img11_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 58px;
+        left: 50px;
+
+        @include bg($img11_mobile);
+      }
+    }
+    &._item12 {
+      top: 55px;
+      left: 277px;
+
+      @include bg($img12_desktop);
+      @media screen and (max-width: 960px) {
+        top: 45px;
+        left: 226px;
+
+        @include bg($img12_tablet);
+      }
+      @media screen and (max-width: 660px) {
+        top: 21px;
+        left: 104px;
+
+        @include bg($img12_mobile);
+      }
+    }
+  }
+}
