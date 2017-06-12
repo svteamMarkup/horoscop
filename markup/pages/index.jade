@@ -9,8 +9,10 @@ html(class="no-js", lang="ru")
     head
         +head(head.defaults)
     body
-        +header()
-        +circle()
-        +footer()
+        .wrapper
+            +header()
+            .content
+                +circle()
+            +footer()
         //- Main scripts. You can replace it, but I recommend you to leave it here
         script(src='%=static=%js/main%=hash=%%=min=%.js')
