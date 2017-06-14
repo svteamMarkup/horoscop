@@ -1,0 +1,194 @@
+.registration-form {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 744px;
+  margin: auto;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  @media screen and (max-width: 660px) {
+    margin: 30px 0;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    z-index: 10;
+
+    display: block;
+
+    width: 100%;
+    height: 79px;
+
+    content: '';
+  }
+  &:before {
+    top: 0;
+
+    background: url(%=static=%assets/registration-form/frame-top.png) no-repeat center;
+  }
+  &:after {
+    bottom: 0;
+
+    background: url(%=static=%assets/registration-form/frame-bottom.png) no-repeat center;
+  }
+}
+
+.registration-form-content {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 685px;
+  margin: auto;
+  padding: 10px 40px;
+
+  background-color: #020431;
+  @media screen and (max-width: 660px) {
+    padding: 10px 20px;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+
+    display: block;
+
+    width: 21px;
+    height: 100%;
+
+    content: '';
+
+    background: url(%=static=%assets/registration-form/frame-repeat.png) repeat-y;
+  }
+  &:before {
+    left: -17px;
+
+    background: url(%=static=%assets/registration-form/frame-repeat-left.png) repeat-y;
+  }
+  &:after {
+    right: -17px;
+
+    background: url(%=static=%assets/registration-form/frame-repeat-right.png) repeat-y;
+  }
+  &__title {
+    font-family: 'Lato-Black';
+    font-size: 34px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ce5cea;
+    @media screen and (max-width: 660px) {
+      font-size: 28px;
+    }
+  }
+  &__zodiac {
+    margin: 10px auto;
+
+    @include bg($reg-zodiac);
+    @media screen and (max-width: 660px) {
+      display: none;
+    }
+  }
+  &__access {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 578px;
+    margin: auto;
+    padding: 5px 0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #d2e8ff;
+    background-color: #172c7d;
+    @media screen and (max-width: 660px) {
+      font-size: 14px;
+
+      margin-top: 15px;
+      padding: 5px 10px;
+    }
+  }
+  &__number {
+    font-size: 18px;
+    line-height: 21px;
+
+    margin-top: 40px;
+
+    text-align: center;
+
+    color: #fff;
+    @media screen and (max-width: 340px) {
+      font-size: 16px;
+      line-height: 18px;
+
+      text-align: center;
+    }
+  }
+  &__label {
+    font-family: 'Lato-Black';
+    font-size: 23px;
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #96c8ff;
+    @media screen and (max-width: 340px) {
+      font-size: 18px;
+    }
+  }
+  &__field {
+    display: block;
+
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 0 10px;
+    @media screen and (max-width: 340px) {
+      width: 100%;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__hint {
+    font-size: 12px;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    color: rgba(#fff, .5);
+  }
+  &__submit {
+    font-family: 'Lato-Black';
+    font-size: 19px;
+
+    display: block;
+
+    margin: 20px auto 10px;
+    padding: 15px 40px;
+
+    transition: all .3s ease-out;
+    text-transform: uppercase;
+
+    color: #051353;
+    border: 0;
+    border-top: 1px solid rgba(#fff, .8);
+    border-radius: 40px;
+    background-color: #ce5cea;
+    box-shadow: 2px 2px 3px #000;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #ce5cea + #111;
+    }
+  }
+}

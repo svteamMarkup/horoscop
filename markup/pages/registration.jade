@@ -1,0 +1,19 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/circle/circle
+    include ../components/registration-form/registration-form
+    include ../components/footer/footer
+
+    head
+        +head(head.defaults)
+    body
+        .wrapper
+            +header()
+            .content
+                +registration-form()
+            +footer()
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
