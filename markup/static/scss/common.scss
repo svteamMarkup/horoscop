@@ -4,9 +4,69 @@ html,
 body {
   font-family: 'Lato-Regular';
 
-  height: 100%;
-
+  color: #fff;
   background: url(%=static=%general/bg.jpg) no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 1024px) {
+    background-size: cover;
+  }
+}
+
+form {
+  width: 100%;
+
+  color: #000;
+  label {
+    color: #fff;
+  }
+}
+
+#schetchik {
+  color: #fff;
+}
+#gotovo {
+  font-family: Arial;
+  font-size: 13px;
+
+  margin-top: 10px;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+#schetchik {
+  box-sizing: border-box;
+  width: 110px;
+  height: 110px;
+  margin: 10px auto 0;
+  padding-top: 47px;
+
+  text-align: center;
+
+  background: transparent url(../images/loading.gif) center center no-repeat;
+}
+.err {
+  text-align: center;
+
+  color: #f00;
+}
+
+a {
+  color: #96c8ff;
+}
+
+#information {
+  text-align: center;
+
+  color: #fff;
+}
+
+#stage2place,
+#stage3place,
+#stage4place,
+#stage5place {
+  display: none;
 }
 
 .wrapper {
@@ -17,6 +77,7 @@ body {
   min-width: 320px;
   max-width: 100%;
   height: 100%;
+  min-height: 100vh;
 }
 
 .content {

@@ -1,4 +1,5 @@
 mixin header(data)
-  .header
+  - var modiffer = attributes.class || ''
+  .header(class="#{modiffer}")
     .header__top Гороскоп на каждый день
     .header__bottom Индивидуальный гороскоп представляет собой фотографию небесной сферы в момент рождения человека

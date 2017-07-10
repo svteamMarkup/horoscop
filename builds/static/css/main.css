@@ -400,11 +400,98 @@ blockquote {
   text-rendering: optimizeLegibility;
 }
 
+select {
+  display: inline-block;
+  height: 37px;
+  color: #000;
+  background: #ccc;
+}
+
+select._active {
+  background: #fff;
+}
+
+#day_proverka2 {
+  width: 75px;
+}
+
+#mon_proverka2 {
+  width: 120px;
+}
+
+#year_proverka2 {
+  width: 75px;
+}
+
+#country_id {
+  width: 200px;
+}
+
 html,
 body {
   font-family: 'Lato-Regular';
-  height: 100%;
+  color: #fff;
   background: url(../images/general/bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    background-size: cover;
+  }
+}
+
+form {
+  width: 100%;
+  color: #000;
+}
+
+form label {
+  color: #fff;
+}
+
+#schetchik {
+  color: #fff;
+}
+
+#gotovo {
+  font-family: Arial;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+#schetchik {
+  box-sizing: border-box;
+  width: 110px;
+  height: 110px;
+  margin: 10px auto 0;
+  padding-top: 47px;
+  text-align: center;
+  background: transparent url(../images/loading.gif) center center no-repeat;
+}
+
+.err {
+  text-align: center;
+  color: #f00;
+}
+
+a {
+  color: #96c8ff;
+}
+
+#information {
+  text-align: center;
+  color: #fff;
+}
+
+#stage2place,
+#stage3place,
+#stage4place,
+#stage5place {
+  display: none;
 }
 
 .wrapper {
@@ -419,6 +506,7 @@ body {
   min-width: 320px;
   max-width: 100%;
   height: 100%;
+  min-height: 100vh;
 }
 
 .content {
@@ -443,7 +531,7 @@ body {
   position: relative;
   width: 802px;
   height: 803px;
-  margin: auto;
+  margin: 50px auto;
   background: url(../images/assets/circle/circle-bg.png) no-repeat;
 }
 
@@ -457,22 +545,32 @@ body {
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container {
-    width: 301px;
-    height: 301px;
-    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    background: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
   .circle-container {
-    position: relative;
-    top: inherit;
-    left: inherit;
-    margin-top: 10px;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    margin-bottom: 30px;
   }
 }
 
@@ -499,12 +597,148 @@ body {
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
+  .circle-container__center {
+    font-size: 32px;
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 30px 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 420px) {
   .circle-container__center {
     font-size: 20px;
-    line-height: 22px;
-    max-width: 160px;
+    line-height: 1;
+    padding: 20px 0;
   }
+}
+
+@media screen and (max-width: 780px) {
+  .circle-container__block {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 25%;
+    padding: 25px 0;
+    text-decoration: none;
+    background: url(../images/general/bg_mobile.png) no-repeat;
+    background-size: cover;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .circle-container__block {
+    width: 33.333%;
+    padding: 10px 0;
+  }
+}
+
+.circle-container__block strong {
+  font-size: 22px;
+  font-weight: normal;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 780px) {
+  .circle-container__block strong {
+    position: inherit;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .circle-container__block strong {
+    font-size: 18px;
+  }
+}
+
+.circle-container__block strong span {
+  font-size: 14px;
+  display: block;
+  white-space: nowrap;
+  color: #add4ff;
+}
+
+@media screen and (max-width: 420px) {
+  .circle-container__block strong span {
+    font-size: 12px;
+  }
+}
+
+.circle-container__block._item1 strong {
+  top: -15px;
+  left: 500px;
+}
+
+.circle-container__block._item2 strong {
+  top: 100px;
+  left: 685px;
+}
+
+.circle-container__block._item3 strong {
+  top: 290px;
+  left: 790px;
+}
+
+.circle-container__block._item4 strong {
+  top: 490px;
+  left: 790px;
+}
+
+.circle-container__block._item5 strong {
+  top: 700px;
+  left: 663px;
+}
+
+.circle-container__block._item6 strong {
+  top: 800px;
+  left: 465px;
+}
+
+.circle-container__block._item7 strong {
+  top: 800px;
+  left: 246px;
+}
+
+.circle-container__block._item8 strong {
+  top: 700px;
+  left: 40px;
+}
+
+.circle-container__block._item9 strong {
+  top: 500px;
+  left: -75px;
+}
+
+.circle-container__block._item10 strong {
+  top: 280px;
+  left: -75px;
+}
+
+.circle-container__block._item11 strong {
+  top: 85px;
+  left: 25px;
+}
+
+.circle-container__block._item12 strong {
+  top: -15px;
+  left: 230px;
 }
 
 .circle-container__item {
@@ -513,6 +747,23 @@ body {
   transition: all .3s ease-out;
   text-decoration: none;
   opacity: 0;
+}
+
+@media screen and (max-width: 780px) {
+  .circle-container__item {
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+    display: block;
+    margin: 0 auto 15px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .circle-container__item {
+    margin-bottom: 0;
+  }
 }
 
 .circle-container__item:hover {
@@ -526,7 +777,7 @@ body {
   background-position: 0px -248px;
   width: 95px;
   height: 102px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -538,20 +789,18 @@ body {
     background-position: -592px 0px;
     width: 77px;
     height: 83px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item1 {
-    top: 22px;
-    left: 161px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -549px -35px;
-    width: 36px;
-    height: 38px;
-    background-size: 669px, 518px;
+    background-position: -89px -436px;
+    width: 61px;
+    height: 65px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -563,7 +812,7 @@ body {
   background-position: -341px -35px;
   width: 112px;
   height: 95px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -575,20 +824,18 @@ body {
     background-position: -460px -143px;
     width: 91px;
     height: 78px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item2 {
-    top: 54px;
-    left: 213px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -533px -248px;
-    width: 42px;
-    height: 36px;
-    background-size: 669px, 518px;
+    background-position: -442px -248px;
+    width: 72px;
+    height: 61px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -600,7 +847,7 @@ body {
   background-position: -197px -143px;
   width: 83px;
   height: 100px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -612,20 +859,18 @@ body {
     background-position: -592px -174px;
     width: 68px;
     height: 82px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item3 {
-    top: 106px;
-    left: 250px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -555px -143px;
-    width: 32px;
-    height: 37px;
-    background-size: 669px, 518px;
+    background-position: -154px -436px;
+    width: 53px;
+    height: 65px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -637,7 +882,7 @@ body {
   background-position: -226px -35px;
   width: 111px;
   height: 96px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -649,20 +894,18 @@ body {
     background-position: 0px -354px;
     width: 90px;
     height: 78px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item4 {
-    top: 168px;
-    left: 243px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -94px -354px;
-    width: 42px;
-    height: 36px;
-    background-size: 669px, 518px;
+    background-position: -518px -248px;
+    width: 70px;
+    height: 61px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -674,7 +917,7 @@ body {
   background-position: 0px -35px;
   width: 108px;
   height: 104px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -686,20 +929,18 @@ body {
     background-position: -457px -35px;
     width: 88px;
     height: 85px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item5 {
-    top: 218px;
-    left: 211px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -442px -248px;
-    width: 41px;
-    height: 39px;
-    background-size: 669px, 518px;
+    background-position: -94px -354px;
+    width: 69px;
+    height: 67px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -711,7 +952,7 @@ body {
   background-position: 0px -143px;
   width: 105px;
   height: 101px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -723,20 +964,18 @@ body {
     background-position: 0px -436px;
     width: 85px;
     height: 82px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item6 {
-    top: 252px;
-    left: 160px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -94px -394px;
-    width: 40px;
-    height: 37px;
-    background-size: 669px, 518px;
+    background-position: -241px -354px;
+    width: 67px;
+    height: 64px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -748,7 +987,7 @@ body {
   background-position: -109px -143px;
   width: 84px;
   height: 101px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -760,20 +999,18 @@ body {
     background-position: -592px -87px;
     width: 68px;
     height: 83px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item7 {
-    top: 251px;
-    left: 104px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -549px -77px;
-    width: 32px;
-    height: 38px;
-    background-size: 669px, 518px;
+    background-position: -211px -436px;
+    width: 53px;
+    height: 65px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -785,7 +1022,7 @@ body {
   background-position: -284px -143px;
   width: 78px;
   height: 100px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -797,20 +1034,18 @@ body {
     background-position: -592px -347px;
     width: 64px;
     height: 81px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item8 {
-    top: 220px;
-    left: 48px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -124px -436px;
-    width: 30px;
-    height: 38px;
-    background-size: 669px, 518px;
+    background-position: -312px -354px;
+    width: 50px;
+    height: 64px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -822,7 +1057,7 @@ body {
   background-position: -112px -35px;
   width: 110px;
   height: 99px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -834,20 +1069,18 @@ body {
     background-position: -366px -143px;
     width: 90px;
     height: 81px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item9 {
-    top: 170px;
-    left: 12px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -487px -248px;
-    width: 42px;
-    height: 37px;
-    background-size: 669px, 518px;
+    background-position: -167px -354px;
+    width: 70px;
+    height: 64px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -859,7 +1092,7 @@ body {
   background-position: -99px -248px;
   width: 82px;
   height: 102px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -871,20 +1104,18 @@ body {
     background-position: -592px -260px;
     width: 67px;
     height: 83px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item10 {
-    top: 105px;
-    left: 18px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -89px -436px;
-    width: 31px;
-    height: 38px;
-    background-size: 669px, 518px;
+    background-position: 0px -522px;
+    width: 53px;
+    height: 66px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -896,7 +1127,7 @@ body {
   background-position: -263px -248px;
   width: 94px;
   height: 75px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -908,20 +1139,19 @@ body {
     background-position: -361px -248px;
     width: 77px;
     height: 61px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item11 {
-    top: 58px;
-    left: 50px;
+    margin-bottom: 15px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -140px -354px;
-    width: 35px;
-    height: 28px;
-    background-size: 669px, 518px;
+    background-position: -366px -354px;
+    width: 60px;
+    height: 47px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -933,7 +1163,7 @@ body {
   background-position: -185px -248px;
   width: 74px;
   height: 102px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -945,20 +1175,18 @@ body {
     background-position: -592px -432px;
     width: 60px;
     height: 83px;
-    background-size: 669px, 518px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 780px) {
   .circle-container__item._item12 {
-    top: 21px;
-    left: 104px;
     background-image: url(../images/png-sprite/96dpi/sprite.png);
-    background-position: -158px -436px;
-    width: 28px;
-    height: 38px;
-    background-size: 669px, 518px;
+    background-position: -268px -436px;
+    width: 47px;
+    height: 65px;
+    background-size: 669px, 630px;
     background-repeat: no-repeat;
   }
 }
@@ -1006,6 +1234,18 @@ body {
   }
 }
 
+@media screen and (max-width: 370px) {
+  .header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header._main {
+    display: block;
+  }
+}
+
 .header__top {
   font-size: 45px;
   padding-bottom: 10px;
@@ -1045,7 +1285,15 @@ body {
 
 @media screen and (max-width: 660px) {
   .registration-form {
-    margin: 30px 0;
+    margin: 20px 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .registration-form {
+    margin-top: 5px;
   }
 }
 
@@ -1058,14 +1306,32 @@ body {
   content: '';
 }
 
+@media screen and (max-width: 660px) {
+  .registration-form:before, .registration-form:after {
+    height: 55px;
+  }
+}
+
 .registration-form:before {
   top: 0;
   background: url(../images/assets/registration-form/frame-top.png) no-repeat center;
 }
 
+@media screen and (max-width: 660px) {
+  .registration-form:before {
+    background-position: top;
+  }
+}
+
 .registration-form:after {
   bottom: 0;
   background: url(../images/assets/registration-form/frame-bottom.png) no-repeat center;
+}
+
+@media screen and (max-width: 660px) {
+  .registration-form:after {
+    background-position: bottom;
+  }
 }
 
 .registration-form-content {
@@ -1080,7 +1346,7 @@ body {
 
 @media screen and (max-width: 660px) {
   .registration-form-content {
-    padding: 10px 20px;
+    padding: 0 15px 10px;
   }
 }
 
@@ -1114,7 +1380,13 @@ body {
 
 @media screen and (max-width: 660px) {
   .registration-form-content__title {
-    font-size: 28px;
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .registration-form-content__title {
+    font-size: 16px;
   }
 }
 
@@ -1124,7 +1396,7 @@ body {
   background-position: 0px 0px;
   width: 588px;
   height: 31px;
-  background-size: 669px, 518px;
+  background-size: 669px, 630px;
   background-repeat: no-repeat;
 }
 
@@ -1162,10 +1434,11 @@ body {
   color: #fff;
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 660px) {
   .registration-form-content__number {
     font-size: 16px;
     line-height: 18px;
+    margin-top: 20px;
     text-align: center;
   }
 }
@@ -1178,9 +1451,10 @@ body {
   color: #96c8ff;
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 660px) {
   .registration-form-content__label {
     font-size: 18px;
+    margin-top: 20px;
   }
 }
 
@@ -1235,4 +1509,271 @@ body {
 .registration-form-content__submit:hover {
   color: #fff;
   background-color: #df6dfb;
+}
+
+.registration-form-content-zodiac {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 420px) {
+  .registration-form-content-zodiac {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.registration-form-content-zodiac__item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 420px) {
+  .registration-form-content-zodiac__item {
+    margin: 4px 8px;
+  }
+}
+
+.registration-form-content-zodiac__item:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  content: '';
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  opacity: 0;
+}
+
+.registration-form-content-zodiac__item._active:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.registration-form-content-zodiac__item._v1 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -403px -436px;
+  width: 34px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v1:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -365px -436px;
+  width: 34px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v2 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -291px -592px;
+  width: 26px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v2:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -261px -592px;
+  width: 26px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v3 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -351px -592px;
+  width: 25px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v3:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -380px -592px;
+  width: 25px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v4 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -297px -327px;
+  width: 30px;
+  height: 23px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v4:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -263px -327px;
+  width: 30px;
+  height: 23px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v5 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -169px -592px;
+  width: 27px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v5:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -200px -592px;
+  width: 27px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v6 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -409px -592px;
+  width: 23px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v6:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -436px -592px;
+  width: 23px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v7 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -138px -522px;
+  width: 33px;
+  height: 30px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v7:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -101px -522px;
+  width: 33px;
+  height: 30px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v8 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -135px -592px;
+  width: 30px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v8:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -101px -592px;
+  width: 30px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v9 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -441px -436px;
+  width: 33px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v9:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -555px -184px;
+  width: 33px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v10 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -478px -436px;
+  width: 35px;
+  height: 29px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v10:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -517px -436px;
+  width: 35px;
+  height: 29px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v11 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -231px -592px;
+  width: 26px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v11:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -321px -592px;
+  width: 26px;
+  height: 31px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v12 {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -175px -522px;
+  width: 34px;
+  height: 29px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
+}
+
+.registration-form-content-zodiac__item._v12:before {
+  background-image: url(../images/png-sprite/96dpi/sprite.png);
+  background-position: -213px -522px;
+  width: 34px;
+  height: 29px;
+  background-size: 669px, 630px;
+  background-repeat: no-repeat;
 }

@@ -9,7 +9,12 @@
   padding-top: 75px;
   padding-bottom: 75px;
   @media screen and (max-width: 660px) {
-    margin: 30px 0;
+    margin: 20px 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  @media screen and (max-width: 320px) {
+    margin-top: 5px;
   }
   &:before,
   &:after {
@@ -22,16 +27,25 @@
     height: 79px;
 
     content: '';
+    @media screen and (max-width: 660px) {
+      height: 55px;
+    }
   }
   &:before {
     top: 0;
 
     background: url(%=static=%assets/registration-form/frame-top.png) no-repeat center;
+    @media screen and (max-width: 660px) {
+      background-position: top;
+    }
   }
   &:after {
     bottom: 0;
 
     background: url(%=static=%assets/registration-form/frame-bottom.png) no-repeat center;
+    @media screen and (max-width: 660px) {
+      background-position: bottom;
+    }
   }
 }
 
@@ -46,7 +60,7 @@
 
   background-color: #020431;
   @media screen and (max-width: 660px) {
-    padding: 10px 20px;
+    padding: 0 15px 10px;
   }
   &:before,
   &:after {
@@ -81,7 +95,10 @@
 
     color: #ce5cea;
     @media screen and (max-width: 660px) {
-      font-size: 28px;
+      font-size: 19px;
+    }
+    @media screen and (max-width: 340px) {
+      font-size: 16px;
     }
   }
   &__zodiac {
@@ -120,9 +137,11 @@
     text-align: center;
 
     color: #fff;
-    @media screen and (max-width: 340px) {
+    @media screen and (max-width: 660px) {
       font-size: 16px;
       line-height: 18px;
+
+      margin-top: 20px;
 
       text-align: center;
     }
@@ -136,8 +155,10 @@
     text-align: center;
 
     color: #96c8ff;
-    @media screen and (max-width: 340px) {
+    @media screen and (max-width: 660px) {
       font-size: 18px;
+
+      margin-top: 20px;
     }
   }
   &__field {
@@ -189,6 +210,120 @@
     &:hover {
       color: #fff;
       background-color: #ce5cea + #111;
+    }
+  }
+}
+
+.registration-form-content-zodiac {
+  display: flex;
+
+  margin: 10px 0;
+
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 420px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    position: relative;
+
+    display: block;
+
+    text-decoration: none;
+    @media screen and (max-width: 420px) {
+      margin: 4px 8px;
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      visibility: hidden;
+
+      content: '';
+      transition: all .2s ease-out;
+
+      opacity: 0;
+    }
+    &._active {
+      &:before {
+        visibility: visible;
+
+        opacity: 1;
+      }
+    }
+    &._v1 {
+      @include bg($v1);
+      &:before {
+        @include bg($v1_active);
+      }
+    }
+    &._v2 {
+      @include bg($v2);
+      &:before {
+        @include bg($v2_active);
+      }
+    }
+    &._v3 {
+      @include bg($v3);
+      &:before {
+        @include bg($v3_active);
+      }
+    }
+    &._v4 {
+      @include bg($v4);
+      &:before {
+        @include bg($v4_active);
+      }
+    }
+    &._v5 {
+      @include bg($v5);
+      &:before {
+        @include bg($v5_active);
+      }
+    }
+    &._v6 {
+      @include bg($v6);
+      &:before {
+        @include bg($v6_active);
+      }
+    }
+    &._v7 {
+      @include bg($v7);
+      &:before {
+        @include bg($v7_active);
+      }
+    }
+    &._v8 {
+      @include bg($v8);
+      &:before {
+        @include bg($v8_active);
+      }
+    }
+    &._v9 {
+      @include bg($v9);
+      &:before {
+        @include bg($v9_active);
+      }
+    }
+    &._v10 {
+      @include bg($v10);
+      &:before {
+        @include bg($v10_active);
+      }
+    }
+    &._v11 {
+      @include bg($v11);
+      &:before {
+        @include bg($v11_active);
+      }
+    }
+    &._v12 {
+      @include bg($v12);
+      &:before {
+        @include bg($v12_active);
+      }
     }
   }
 }

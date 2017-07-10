@@ -3,7 +3,9 @@ mixin registration-form(data)
     .registration-form-content
       .registration-form-content__title Защита личной информации
 
-      .registration-form-content__zodiac
+      .registration-form-content-zodiac
+        - for (var i = 1; i < 13; i++)
+          a(href="#" title="" class="_v#{i}").registration-form-content-zodiac__item
 
       .registration-form-content__access Доступ к гороскопу предоставляеться строго персонально!
 

@@ -1,2 +1,29 @@
 // GUI stylies of the project
 // For example, styles of the links, buttons and so on.
+
+select {
+  display: inline-block;
+
+  height: 37px;
+  color: #000;
+  background: #ccc;
+  &._active {
+    background: #fff;
+  }
+}
+
+#day_proverka2 {
+  width: 75px;
+}
+
+#mon_proverka2 {
+  width: 120px;
+}
+
+#year_proverka2 {
+  width: 75px;
+}
+
+#country_id {
+  width: 200px;
+}

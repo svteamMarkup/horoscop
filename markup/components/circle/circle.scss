@@ -3,7 +3,7 @@
 
   width: 802px;
   height: 803px;
-  margin: auto;
+  margin: 50px auto;
 
   background: url(%=static=%assets/circle/circle-bg.png) no-repeat;
   @media screen and (max-width: 960px) {
@@ -15,24 +15,25 @@
 
     background-size: cover;
   }
-  @media screen and (max-width: 660px) {
-    // position: absolute;
-    // top: 40%;
-    // left: 50%;
-    width: 301px;
-    height: 301px;
-    margin: auto;
-    // margin-top: 20px;
-    // transform: translate(-50%,-50%);
+  @media screen and (max-width: 780px) {
+    display: flex;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    text-align: center;
+
+    background: none;
+
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
   }
-  @media screen and (max-width: 320px) {
-    position: relative;
-    top: inherit;
-    left: inherit;
-
-    margin-top: 10px;
-
-    transform: translate(0);
+  @media screen and (max-width: 420px) {
+    margin-bottom: 30px;
   }
   &__center {
     font-family: 'Lato-Black';
@@ -55,11 +56,147 @@
       font-size: 40px;
       line-height: 42px;
     }
-    @media screen and (max-width: 660px) {
-      font-size: 20px;
-      line-height: 22px;
+    @media screen and (max-width: 780px) {
+      font-size: 32px;
 
-      max-width: 160px;
+      position: relative;
+      top: 0;
+      left: 0;
+
+      max-width: 100%;
+      padding: 30px 0;
+
+      transform: translate(0,0);
+    }
+    @media screen and (max-width: 420px) {
+      font-size: 20px;
+      line-height: 1;
+
+      padding: 20px 0;
+    }
+  }
+  &__block {
+    @media screen and (max-width: 780px) {
+      display: block;
+      display: flex;
+
+      width: 25%;
+      padding: 25px 0;
+
+      text-decoration: none;
+
+      background: url(%=static=%general/bg_mobile.png) no-repeat;
+      background-size: cover;
+
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 420px) {
+      width: 33.333%;
+      padding: 10px 0;
+    }
+    strong {
+      font-size: 22px;
+      font-weight: normal;
+
+      position: absolute;
+
+      text-align: center;
+
+      color: #fff;
+      @media screen and (max-width: 780px) {
+        position: inherit;
+
+        width: 100%;
+      }
+      @media screen and (max-width: 420px) {
+        font-size: 18px;
+      }
+      span {
+        font-size: 14px;
+
+        display: block;
+
+        white-space: nowrap;
+
+        color: #add4ff;
+        @media screen and (max-width: 420px) {
+          font-size: 12px;
+        }
+      }
+    }
+    &._item1 {
+      strong {
+        top: -15px;
+        left: 500px;
+      }
+    }
+    &._item2 {
+      strong {
+        top: 100px;
+        left: 685px;
+      }
+    }
+    &._item3 {
+      strong {
+        top: 290px;
+        left: 790px;
+      }
+    }
+    &._item4 {
+      strong {
+        top: 490px;
+        left: 790px;
+      }
+    }
+    &._item5 {
+      strong {
+        top: 700px;
+        left: 663px;
+      }
+    }
+    &._item6 {
+      strong {
+        top: 800px;
+        left: 465px;
+      }
+    }
+    &._item7 {
+      strong {
+        top: 800px;
+        left: 246px;
+      }
+    }
+    &._item8 {
+      strong {
+        top: 700px;
+        left: 40px;
+      }
+    }
+    &._item9 {
+      strong {
+        top: 500px;
+        left: -75px;
+      }
+    }
+    &._item10 {
+      strong {
+        top: 280px;
+        left: -75px;
+      }
+    }
+    &._item11 {
+      strong {
+        top: 85px;
+        left: 25px;
+      }
+    }
+    &._item12 {
+      strong {
+        top: -15px;
+        left: 230px;
+      }
     }
   }
   &__item {
@@ -69,6 +206,20 @@
     text-decoration: none;
 
     opacity: 0;
+    @media screen and (max-width: 780px) {
+      position: relative;
+      top: 0 !important;
+      left: 0 !important;
+
+      display: block;
+
+      margin: 0 auto 15px;
+
+      opacity: 1;
+    }
+    @media screen and (max-width: 420px) {
+      margin-bottom: 0;
+    }
     &:hover {
       opacity: 1;
     }
@@ -83,11 +234,8 @@
 
         @include bg($img1_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 22px;
-        left: 161px;
-
-        @include bg($img1_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img1_mobile_an);
       }
     }
     &._item2 {
@@ -101,11 +249,8 @@
 
         @include bg($img2_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 54px;
-        left: 213px;
-
-        @include bg($img2_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img2_mobile_an);
       }
     }
     &._item3 {
@@ -119,11 +264,8 @@
 
         @include bg($img3_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 106px;
-        left: 250px;
-
-        @include bg($img3_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img3_mobile_an);
       }
     }
     &._item4 {
@@ -137,11 +279,8 @@
 
         @include bg($img4_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 168px;
-        left: 243px;
-
-        @include bg($img4_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img4_mobile_an);
       }
     }
     &._item5 {
@@ -155,11 +294,8 @@
 
         @include bg($img5_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 218px;
-        left: 211px;
-
-        @include bg($img5_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img5_mobile_an);
       }
     }
     &._item6 {
@@ -173,11 +309,8 @@
 
         @include bg($img6_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 252px;
-        left: 160px;
-
-        @include bg($img6_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img6_mobile_an);
       }
     }
     &._item7 {
@@ -191,11 +324,8 @@
 
         @include bg($img7_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 251px;
-        left: 104px;
-
-        @include bg($img7_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img7_mobile_an);
       }
     }
     &._item8 {
@@ -209,11 +339,8 @@
 
         @include bg($img8_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 220px;
-        left: 48px;
-
-        @include bg($img8_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img8_mobile_an);
       }
     }
     &._item9 {
@@ -227,11 +354,8 @@
 
         @include bg($img9_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 170px;
-        left: 12px;
-
-        @include bg($img9_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img9_mobile_an);
       }
     }
     &._item10 {
@@ -245,11 +369,8 @@
 
         @include bg($img10_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 105px;
-        left: 18px;
-
-        @include bg($img10_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img10_mobile_an);
       }
     }
     &._item11 {
@@ -263,11 +384,10 @@
 
         @include bg($img11_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 58px;
-        left: 50px;
+      @media screen and (max-width: 780px) {
+        margin-bottom: 15px;
 
-        @include bg($img11_mobile);
+        @include bg($img11_mobile_an);
       }
     }
     &._item12 {
@@ -281,11 +401,8 @@
 
         @include bg($img12_tablet);
       }
-      @media screen and (max-width: 660px) {
-        top: 21px;
-        left: 104px;
-
-        @include bg($img12_mobile);
+      @media screen and (max-width: 780px) {
+        @include bg($img12_mobile_an);
       }
     }
   }
